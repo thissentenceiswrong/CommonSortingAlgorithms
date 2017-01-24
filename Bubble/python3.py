@@ -9,7 +9,8 @@ def bubble_sort(arr):
 
     return arr
 
+
 if __name__ == '__main__':
-    arr = [3,9,1,2,4,8,6,7,0,5]
+    arr = [3, 9, 1, 2, 4, 8, 6, 7, 0, 5]
     print(bubble_sort(arr))
     print(arr)
