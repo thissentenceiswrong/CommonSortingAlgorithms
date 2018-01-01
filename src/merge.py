@@ -1,9 +1,13 @@
+import math
+
+
 def merge_sort(arr):
     """
     Merge Sort
 
     Split list into multi-lists and pick the smallest from them
     """
+
     def merge(arr1, arr2):
         """
         Compare and Merge
@@ -33,17 +37,11 @@ def merge_sort(arr):
     if len(arr) == 1:
         return arr
 
-    # Split arr
-    # todo: use floor()
-    l_list = arr[0:int(len(arr) / 2 + 0.5)]
-    r_list = arr[int(len(arr) / 2 + 0.5):len(arr)]
+    # Equally split arr into halves
+    l_list = arr[0:math.floor(len(arr) / 2)]
+    r_list = arr[math.floor(len(arr) / 2):]
 
     l_list = merge_sort(l_list)
     r_list = merge_sort(r_list)
 
     return merge(l_list, r_list)
-
-
-if __name__ == '__main__':
-    var = [6, 5, 1, 4, 2, 8, 9, 7, 3]
-    print(merge_sort(var))
