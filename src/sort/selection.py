@@ -1,6 +1,10 @@
 def select_sort(arr):
     """
     Each loop finds the smallest value and swap it with the front of list
+
+    Complexity:
+    Time: 
+    Space: 
     """
     for index_head in range(len(arr)):
         index_smallest = index_head

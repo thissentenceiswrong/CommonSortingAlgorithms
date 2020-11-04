@@ -1,8 +1,12 @@
 def insert_sort(arr):
     """
-    Insert Sort
+    Insertion Sort
 
     Each loop picks next element and inserts it into already sorted list
+
+    Complexity:
+    Time: 
+    Space: 
     """
     for index in range(1, len(arr)):
         current = arr[index]

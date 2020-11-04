@@ -3,8 +3,13 @@ def bubble_sort(arr):
     Bubble Sort
 
     Each loop brings the biggest value to the end of the array
-    """
 
+    Complexity:
+    Time: 
+        Average:
+        Worst:
+    Space: 
+    """
     # lop goes reversed
     for lop in reversed(range(len(arr))):
         for lop2 in range(lop):

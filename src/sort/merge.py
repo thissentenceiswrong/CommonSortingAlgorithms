@@ -1,18 +1,18 @@
-import math
-
-
 def merge_sort(arr):
     """
     Merge Sort
 
     Split list into multi-lists and pick the smallest from them
-    """
 
+    Complexity:
+    Time: 
+    Space: 
+    """
     def merge(arr1, arr2):
         """
         Compare and Merge
         """
-        arr_ret = list()
+        arr_ret = []
 
         cur1 = 0
         cur2 = 0
@@ -38,10 +38,23 @@ def merge_sort(arr):
         return arr
 
     # Equally split arr into halves
-    l_list = arr[0:math.floor(len(arr) / 2)]
-    r_list = arr[math.floor(len(arr) / 2):]
+    index_halve = len(arr) // 2
+    l_list = arr[0:index_halve]
+    r_list = arr[index_halve:]
 
     l_list = merge_sort(l_list)
     r_list = merge_sort(r_list)
 
     return merge(l_list, r_list)
+
+
+if __name__ == "__main__":
+    samples = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [9, 8, 7, 6, 5, 4, 3, 2, 1],
+        [5, 1, 7, 2, 3, 9, 8, 4, 6],
+        [2, 2, 2, 1, 1, 1, 5, 5, 5]
+    ]
+
+    for sample in samples:
+        print(merge_sort(sample))
