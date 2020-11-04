@@ -1,4 +1,4 @@
-def select_sort(arr):
+def selection_sort(arr):
     """
     Each loop finds the smallest value and swap it with the front of list
 

@@ -13,8 +13,8 @@ Collection of some common algorithms implemented by my own, just for practicing
 
 ### 2. Sorting Algorithms
 1. [Bubble sort](src/sort/bubble.py)
-2. [Select sort](src/sort/selection.py)
-3. [Insert sort](src/sort/insert.py)
+2. [Selection sort](src/sort/selection.py)
+3. [Insertion sort](src/sort/insertion.py)
 4. [Merge sort](src/sort/merge.py)
 5. [Quick sort](src/sort/quick.py)
 

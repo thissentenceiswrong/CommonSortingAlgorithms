@@ -1,4 +1,4 @@
-def insert_sort(arr):
+def insertion_sort(arr):
     """
     Insertion Sort
 
