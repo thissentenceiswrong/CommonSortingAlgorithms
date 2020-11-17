@@ -1,37 +1,22 @@
-def quick_sort(arr):
-    """
-    Quick Sort
+# [left, right)
+def quick_sort(array, left, right):
+    if not left < right:
+        return
 
-    Split & Sort
+    index_pivot = left
+    index_tmp = index_pivot + 1
 
-    Complexity:
-    Time: 
-    Space: 
-    """
-    def helper(arr, low, high):
-        if not low < high:
-            return
+    for i in range(index_tmp, right):
+        if arr[i] < arr[index_pivot]:
+            # swap
+            arr[i], arr[index_tmp] = arr[index_tmp], arr[i]
+            index_tmp += 1
 
-        # Randomly pick a pivot (low in this example)
-        index_pivot = low
-        # Swap value that is < pivot with this index
-        index_tmp = index_pivot + 1
+    # swap pivot
+    arr[index_pivot], arr[index_tmp - 1] = arr[index_tmp - 1], arr[index_pivot]
 
-        # Move value that are smaller than pivot forward
-        for i in range(index_pivot + 1, high):
-            if arr[i] < arr[index_pivot]:
-                arr[i], arr[index_tmp] = arr[index_tmp], arr[i]
-                index_tmp += 1
-
-        # Swap pivot with the last value <= pivot
-        arr[index_pivot], arr[index_tmp - 1] \
-            = arr[index_tmp - 1], arr[index_pivot]
-
-        helper(arr, low, index_tmp - 1)
-        helper(arr, index_tmp, high)
-        return arr
-
-    return helper(arr, 0, len(arr))
+    quick_sort(arr, left, index_tmp - 1)
+    quick_sort(arr, index_tmp, right)
 
 
 if __name__ == "__main__":
