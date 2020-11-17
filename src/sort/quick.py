@@ -1,5 +1,5 @@
 # [left, right)
-def quick_sort(array, left, right):
+def quick_sort(arr, left, right):
     if not left < right:
         return
 
@@ -28,4 +28,4 @@ if __name__ == "__main__":
     ]
 
     for sample in samples:
-        print(quick_sort(sample))
+        print(quick_sort(sample, 0, len(sample))
